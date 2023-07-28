@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 
 def preprocess(string_data, penalty_length=25):
-    penalty_dict = {0 : 0.5, 1 : 1, 2 : 1, 3 : 1, 4 : 0.75, 5 : 0.75}
+    penalty_dict = {0 : 0.5, 1 : 1, 2 : 1, 3 : 1, 4 : 0.8, 5 : 0.75}
     return penalty_dict[len(string_data) // penalty_length]
 
 def main(string_data):
